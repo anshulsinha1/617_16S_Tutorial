@@ -1,6 +1,7 @@
-# 617_16S_Tutorial
+# Microbiome 617 Data Analysis Tutorial 
 
-Contains data, and materials necessary for 16S rRNA gene sequencing analyses of a publised dataset
+
+How to go from raw 16S rRNA gene sequencing reads to biologically informative data and figures
 
 
 Dataset to be analyzed: 

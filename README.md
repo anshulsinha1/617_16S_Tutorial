@@ -12,4 +12,5 @@ Raw read files deposited in NCBI SRA: PRJNA754019
 
 Dataset Overview: 
 
-![alt text]
+![image](https://github.com/user-attachments/assets/22a4868b-710d-4069-99b9-637b9acbe6c1)
+

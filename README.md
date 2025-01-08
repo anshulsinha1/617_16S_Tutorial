@@ -9,6 +9,10 @@ Ecological dynamics of the gut microbiome in response to dietary fiber: Liu et a
 Raw read files deposited in NCBI SRA: PRJNA754019
 
 
+16S rRNA Analysis Overview: 
+
+![image](https://github.com/user-attachments/assets/2971fe51-d085-4bae-8966-9ce372b88bcf)
+
 
 Dataset Overview: 
 

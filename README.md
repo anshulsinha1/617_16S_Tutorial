@@ -1,3 +1,11 @@
+---
+layout: default
+title: Home Page
+permalink:/home/
+---
+
+
+
 # Microbiome 617 Data Analysis Tutorial 
 
 

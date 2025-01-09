@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Page 2
-description: Description for Page 1
+title: Pre-Processing
+description: Description for Pre-Processing
+permalink: /pre-processing/
 ---
 
+# Pre-Processing
 
-# Data Pre-Processing 
-
-The steps below will go through some of the pre-processing we need to do on our 16S reads before we can proceed
+This is the content of the Pre-Processing page.

@@ -3,7 +3,7 @@
 
 How to go from raw 16S rRNA gene sequencing reads to biologically informative data and figures
 
-[a relative link](Data Pre-Processing.md)
+[a link](https://github.com/user/repo/blob/branch/other_file.md)
 
 
 ## 16S rRNA Analysis Overview: 

@@ -1,5 +1,5 @@
 
-# Microbiome 617 Data Analysis Tutorial 
+# Microbiome 617 - Analyzing Microbiome Data 
 
 
 How to go from raw 16S rRNA gene sequencing reads to biologically informative data and figures

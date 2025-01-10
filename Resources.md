@@ -1,0 +1,41 @@
+---
+layout: default
+title: Resources
+description: 
+permalink: /resources/
+---
+
+# Resources 
+
+Rather than a straightforward one-size fits all approach
+
+Rather than a one-size-fits-all, bioinformatics projects are inherently patchwork in nature! You'll need to use an assortment of tools, techniques and resources to analyze your data. I've compiled resources (16S-specific and beyond) that I've personally found helpful.
+Bioinformatics techniques are ever-evolving, so this is just a drop in the bucket
+
+
+## Qiime2: 
+
+https://use.qiime2.org/en/latest/intro.html
+ - A microbiome platform with easy-to-use commands and data types
+ - Really good if you're new to bioinformatics - lots of easy to follow documentation,tutorials, and active support on forums (really good resource for  microbial ecology/16S stuff in general)
+ - A bit restrictive for more experienced users, but I still use qiime2 for upstream data processing (see data pre-processing section)
+
+
+## R packages
+
+Phyloseq: https://joey711.github.io/phyloseq/
+- Generally one of the most commonly used R packages for microbial ecology projects
+- Integrates statistical, visualization, and general microbial ecology pipelines
+- We will use this extensively in the hands-on session!
+
+Vegan: https://cran.r-project.org/web/packages/vegan/vegan.pdf
+- Community ecology package
+- Specifically useful for ordination and calculating diversity
+  
+
+## Miscellaneous 
+
+- Riffomonas (Pat Schloss) - Youtube channel - Lots of microbiome-specific videos on microbiome analyses
+- StatQuest (Josh Starmer) -  YouTube channel - Particuarily helpful for ecology and stats-related things
+- Bioinformatics Data Skills (Vince Buffalo) - A book! - From 2015, but holds up really well, particularily for project management
+

@@ -22,7 +22,7 @@ https://use.qiime2.org/en/latest/intro.html
 
 
 
-#Using and installing R
+# Using and installing R
 
 By Laura Camelo, McGill University
 

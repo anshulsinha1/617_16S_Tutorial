@@ -7,4 +7,11 @@ permalink: /pre-processing/
 
 # Pre-Processing
 
-This is the content of the Pre-Processing page.
+**The information covered on this page is NOT covered in the hands-on session. This is purely a reference for how to go from raw Illumina 16S reads to a feature table!
+
+
+
+
+
+
+

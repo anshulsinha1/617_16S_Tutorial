@@ -21,7 +21,23 @@ https://use.qiime2.org/en/latest/intro.html
  - A bit restrictive for more experienced users, but I still use qiime2 for upstream data processing (see data pre-processing section)
 
 
-## R packages
+
+#Using and installing R
+By Laura Camelo, McGill University
+
+## What is R?
+R is a free programming environment that integrates tools to perform manipulation
+of data, statistical calculations and generation of graphs.
+To use R it is necessary to download the programming language and binary files to control
+its use in the desired operating system. Subsequently, it is recommended to download RStudio which is
+an application (Integrated Development Environment) that allows you to use the programming language
+in an easier and more organized way (e.g. code editor, graphics panels, visualization of the
+variables).
+
+
+
+
+## Useful R packages
 
 Phyloseq: https://joey711.github.io/phyloseq/
 - Generally one of the most commonly used R packages for microbial ecology projects
@@ -31,11 +47,17 @@ Phyloseq: https://joey711.github.io/phyloseq/
 Vegan: https://cran.r-project.org/web/packages/vegan/vegan.pdf
 - Community ecology package
 - Specifically useful for ordination and calculating diversity
-  
 
+  
+  
 ## Miscellaneous 
 
 - Riffomonas (Pat Schloss) - Youtube channel - Lots of microbiome-specific videos on microbiome analyses
 - StatQuest (Josh Starmer) -  YouTube channel - Particuarily helpful for ecology and stats-related things
 - Bioinformatics Data Skills (Vince Buffalo) - A book! - From 2015, but holds up really well, particularily for project management
+
+
+
+
+
 

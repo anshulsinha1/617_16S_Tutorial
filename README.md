@@ -8,7 +8,9 @@ How to go from raw 16S rRNA gene sequencing reads to biologically informative da
 ## 16S rRNA Analysis Overview: 
 
 A general overview how to analyze 16S rRNA gene sequencing!
-I will provide information on all the steps below in the lecture, but the hands-on sessions will largely focus on library size normalization, calculating ecological distance, and generating ordination/relative abundance plots. These methods are universal and often used in microbial ecology analyses
+I will provide information on all the steps below in the lecture, but the hands-on sessions will largely focus on library size normalization, calculating ecological distance, and generating ordination/relative abundance plots. 
+
+The goal here is not to go through every step in excruciating detail but to give you an overview of the workflow, understand the biology, and some of the aspects of the pipeline that are universal to microbial ecology analyses
 
 
 

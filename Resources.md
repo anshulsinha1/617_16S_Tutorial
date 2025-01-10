@@ -7,9 +7,9 @@ permalink: /resources/
 
 # Resources 
 
-Rather than a straightforward one-size fits all approach
+Rather than a one-size-fits-all, bioinformatics projects are inherently patchwork in nature! 
 
-Rather than a one-size-fits-all, bioinformatics projects are inherently patchwork in nature! You'll need to use an assortment of tools, techniques and resources to analyze your data. I've compiled resources (16S-specific and beyond) that I've personally found helpful.
+You'll need to use an assortment of tools, techniques and resources to analyze your data. I've compiled resources (16S-specific and beyond) that I've personally found helpful.
 Bioinformatics techniques are ever-evolving, so this is just a drop in the bucket
 
 
@@ -23,6 +23,7 @@ https://use.qiime2.org/en/latest/intro.html
 
 
 #Using and installing R
+
 By Laura Camelo, McGill University
 
 ## What is R?

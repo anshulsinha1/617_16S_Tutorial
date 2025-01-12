@@ -2,7 +2,9 @@
 # Microbiome 617 - Analyzing Microbiome Data 
 
 
-How to go from raw 16S rRNA gene sequencing reads to biologically informative data and figures
+By the end of our two classes you'll (hopefully!) get a better grasp of how to go from raw 16S sequences to biologically informative conclusions 
+
+
 
 
 ## 16S rRNA Analysis Overview: 

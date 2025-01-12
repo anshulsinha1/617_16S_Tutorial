@@ -26,7 +26,7 @@ The goal here is not to go through every step in excruciating detail but to give
 Ecological dynamics of the gut microbiome in response to dietary fiber: Liu et al., 2022 (ISME): https://www.nature.com/articles/s41396-022-01253-4#code-availability
 Raw read files deposited in NCBI SRA: PRJNA754019
 
-A (relatively simple) and interesting 16S dataset! 
+A relatively simple and (interesting) 16S dataset! 
 
 Dataset Overview: 
 

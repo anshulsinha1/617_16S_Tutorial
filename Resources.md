@@ -32,7 +32,10 @@ variables).
 
 ## How to install R and R studio 
 
-For users new to R, you'll want to install both R and R studio on your computer before the first class: https://posit.co/download/rstudio-desktop/
+For users new to R, you'll want to install both R and R studio on your computer before the first class: [Instructions](https://posit.co/download/rstudio-desktop/)
+
+
+
 
 ## Resources for R begginers
 

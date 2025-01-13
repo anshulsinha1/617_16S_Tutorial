@@ -39,29 +39,27 @@ For users new to R, you'll want to install both R and R studio on your computer 
 
 ## Resources for R begginers
 
-1) Helpful for syntax and basic R programming: https://www.youtube.com/watch?v=FY8BISK5DpM&t=120s
+1)  [Video tutorial helpful for syntax and basic R programming:](https://www.youtube.com/watch?v=FY8BISK5DpM)
 
-2) A nice (and slightly more advanced) tutorial by Laura Camelo on how to process RNA-seq data using R. Good for understanding syntax, data types, and visualization
+2) A nice (and slightly more advanced) tutorial by Laura Camelo on how to process RNA-seq data using R. Good for understanding syntax, data types, and visualization.
 
 
 
 
 ## Useful R packages
 
-Phyloseq: https://joey711.github.io/phyloseq/
+Phyloseq:  [Documentation:](https://joey711.github.io/phyloseq/)
 - Generally one of the most commonly used R packages for microbial ecology projects
 - Integrates statistical, visualization, and general microbial ecology pipelines
 - We will use this extensively in the hands-on session!
 
-Vegan: https://cran.r-project.org/web/packages/vegan/vegan.pdf
+Vegan: [Documentation:](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
 - Community ecology package
 - Specifically useful for ordination and calculating diversity
 
 
 
-## Qiime2: 
-
-https://use.qiime2.org/en/latest/intro.html
+## Qiime2: [Documentation:](https://use.qiime2.org/en/latest/intro.html)
  - A microbiome platform with easy-to-use commands and data types
  - Really good if you're new to bioinformatics - lots of easy to follow documentation,tutorials, and active support on forums (really good resource for  microbial ecology/16S stuff in general)
  - A bit restrictive for more experienced users, but I still use qiime2 for upstream data processing (see data pre-processing section)

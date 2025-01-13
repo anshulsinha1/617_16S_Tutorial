@@ -59,7 +59,8 @@ Vegan: [Documentation:](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
 
 
 
-## Qiime2: [Documentation:](https://use.qiime2.org/en/latest/intro.html)
+## Qiime2: 
+- [Documentation:](https://use.qiime2.org/en/latest/intro.html)
  - A microbiome platform with easy-to-use commands and data types
  - Really good if you're new to bioinformatics - lots of easy to follow documentation,tutorials, and active support on forums (really good resource for  microbial ecology/16S stuff in general)
  - A bit restrictive for more experienced users, but I still use qiime2 for upstream data processing (see data pre-processing section)
@@ -68,8 +69,8 @@ Vegan: [Documentation:](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
   
 ## Miscellaneous 
 
-- Riffomonas (Pat Schloss) - Youtube channel - Lots of microbiome-specific videos on microbiome analyses
-- StatQuest (Josh Starmer) -  YouTube channel - Particuarily helpful for ecology and stats-related things
+- Riffomonas (Pat Schloss) - [Documentation:](https://www.youtube.com/@Riffomonas) - Lots of microbiome-specific videos on microbiome analyses 
+- StatQuest (Josh Starmer) - [Documentation:](https://www.youtube.com/@statquest) - Particuarily helpful for ecology and stats-related things
 - Bioinformatics Data Skills (Vince Buffalo) - A book! - From 2015, but holds up really well, particularily for project management
 
 

@@ -1,0 +1,153 @@
+id	Day	Group	mice_id	vendor
+SRR15422777	0	Inulin	BI2	Beijing
+SRR15422780	31	Inulin	GI5	Guangdong
+SRR15422782	31	Inulin	GI4	Guangdong
+SRR15422787	31	Inulin	SI1	Shanghai
+SRR15422789	0	Inulin	SI4	Shanghai
+SRR15422799	31	Resistant starch	SR5	Shanghai
+SRR15422802	0	Inulin	SI3	Shanghai
+SRR15422810	31	Resistant starch	SR4	Shanghai
+SRR15422820	0	Cellulose	SC2	Shanghai
+SRR15422848	31	Inulin	GI3	Guangdong
+SRR15422850	31	Inulin	GI2	Guangdong
+SRR15422853	31	Inulin	GI1	Guangdong
+SRR15422854	31	Resistant starch	GR5	Guangdong
+SRR15422856	31	Resistant starch	GR4	Guangdong
+SRR15422857	31	Resistant starch	GR3	Guangdong
+SRR15422858	31	Resistant starch	GR2	Guangdong
+SRR15422859	31	Resistant starch	GR1	Guangdong
+SRR15422860	31	Cellulose	GC5	Guangdong
+SRR15422861	31	Cellulose	GC4	Guangdong
+SRR15422862	31	Cellulose	GC3	Guangdong
+SRR15422863	0	Inulin	BI1	Beijing
+SRR15422864	31	Cellulose	GC2	Guangdong
+SRR15422865	31	Cellulose	GC1	Guangdong
+SRR15422874	0	Resistant starch	BR5	Beijing
+SRR15422882	0	Resistant starch	SR5	Shanghai
+SRR15422883	0	Cellulose	SC1	Shanghai
+SRR15422897	0	Cellulose	SC5	Shanghai
+SRR15422901	0	Resistant starch	BR4	Beijing
+SRR15422910	13	Inulin	GI4	Guangdong
+SRR15422911	13	Inulin	GI3	Guangdong
+SRR15422912	0	Resistant starch	BR3	Beijing
+SRR15422913	13	Inulin	GI2	Guangdong
+SRR15422914	13	Inulin	GI1	Guangdong
+SRR15422915	13	Resistant starch	GR5	Guangdong
+SRR15422919	0	Inulin	SI2	Shanghai
+SRR15422921	31	Resistant starch	SR3	Shanghai
+SRR15422932	31	Resistant starch	SR2	Shanghai
+SRR15422933	0	Inulin	SI1	Shanghai
+SRR15422943	31	Resistant starch	SR1	Shanghai
+SRR15422946	0	Cellulose	SC3	Shanghai
+SRR15422954	31	Cellulose	SC5	Shanghai
+SRR15422976	31	Cellulose	SC4	Shanghai
+SRR15422980	13	Resistant starch	GR4	Guangdong
+SRR15422981	13	Resistant starch	GR3	Guangdong
+SRR15422982	13	Resistant starch	GR2	Guangdong
+SRR15422983	13	Resistant starch	GR1	Guangdong
+SRR15422984	13	Cellulose	GC5	Guangdong
+SRR15422986	13	Cellulose	GC4	Guangdong
+SRR15422987	0	Resistant starch	BR2	Beijing
+SRR15422988	13	Cellulose	GC3	Guangdong
+SRR15422989	13	Cellulose	GC2	Guangdong
+SRR15422990	13	Cellulose	GC1	Guangdong
+SRR15422998	0	Resistant starch	BR1	Beijing
+SRR15423009	0	Cellulose	BC5	Beijing
+SRR15423013	5	Inulin	GI4	Guangdong
+SRR15423015	5	Inulin	GI3	Guangdong
+SRR15423017	5	Inulin	GI2	Guangdong
+SRR15423019	5	Inulin	GI1	Guangdong
+SRR15423020	0	Cellulose	BC4	Beijing
+SRR15423021	5	Resistant starch	GR5	Guangdong
+SRR15423022	5	Resistant starch	GR4	Guangdong
+SRR15423023	5	Resistant starch	GR3	Guangdong
+SRR15423024	5	Resistant starch	GR2	Guangdong
+SRR15423025	5	Resistant starch	GR1	Guangdong
+SRR15423026	5	Cellulose	GC5	Guangdong
+SRR15423027	5	Resistant starch	SR5	Shanghai
+SRR15423028	5	Cellulose	GC4	Guangdong
+SRR15423029	5	Cellulose	GC3	Guangdong
+SRR15423030	5	Cellulose	GC2	Guangdong
+SRR15423031	0	Cellulose	BC3	Beijing
+SRR15423032	5	Cellulose	GC1	Guangdong
+SRR15423039	5	Resistant starch	SR4	Shanghai
+SRR15423042	0	Cellulose	BC2	Beijing
+SRR15423051	5	Resistant starch	SR3	Shanghai
+SRR15423053	0	Cellulose	BC1	Beijing
+SRR15423063	5	Resistant starch	SR2	Shanghai
+SRR15423071	0	Inulin	GI5	Guangdong
+SRR15423073	0	Inulin	GI4	Guangdong
+SRR15423075	0	Inulin	GI3	Guangdong
+SRR15423083	31	Cellulose	SC3	Shanghai
+SRR15423090	31	Inulin	BI5	Beijing
+SRR15423092	31	Inulin	BI4	Beijing
+SRR15423094	31	Cellulose	SC2	Shanghai
+SRR15423096	31	Inulin	BI3	Beijing
+SRR15423098	31	Inulin	BI2	Beijing
+SRR15423100	31	Inulin	BI1	Beijing
+SRR15423101	31	Resistant starch	BR5	Beijing
+SRR15423103	31	Resistant starch	BR4	Beijing
+SRR15423104	31	Resistant starch	BR3	Beijing
+SRR15423105	31	Resistant starch	BR2	Beijing
+SRR15423106	31	Cellulose	SC1	Shanghai
+SRR15423107	31	Resistant starch	BR1	Beijing
+SRR15423108	31	Inulin	SI5	Shanghai
+SRR15423110	0	Inulin	GI2	Guangdong
+SRR15423112	0	Inulin	GI1	Guangdong
+SRR15423113	0	Resistant starch	GR5	Guangdong
+SRR15423114	5	Resistant starch	SR1	Shanghai
+SRR15423115	0	Resistant starch	GR4	Guangdong
+SRR15423116	0	Resistant starch	GR3	Guangdong
+SRR15423117	0	Resistant starch	GR2	Guangdong
+SRR15423118	0	Resistant starch	GR1	Guangdong
+SRR15423120	0	Cellulose	GC5	Guangdong
+SRR15423121	0	Cellulose	GC4	Guangdong
+SRR15423122	0	Cellulose	GC3	Guangdong
+SRR15423123	0	Cellulose	GC2	Guangdong
+SRR15423124	0	Cellulose	GC1	Guangdong
+SRR15423127	5	Cellulose	SC5	Shanghai
+SRR15423128	0	Cellulose	SC4	Shanghai
+SRR15423141	5	Cellulose	BC4	Beijing
+SRR15423142	5	Cellulose	BC3	Beijing
+SRR15423143	5	Cellulose	BC2	Beijing
+SRR15423144	5	Cellulose	BC1	Beijing
+SRR15423158	31	Cellulose	BC5	Beijing
+SRR15423159	31	Cellulose	BC4	Beijing
+SRR15423160	31	Cellulose	BC3	Beijing
+SRR15423161	31	Cellulose	BC2	Beijing
+SRR15423162	31	Cellulose	BC1	Beijing
+SRR15423214	0	Inulin	BI5	Beijing
+SRR15423223	31	Inulin	SI4	Shanghai
+SRR15423227	5	Cellulose	SC4	Shanghai
+SRR15423239	5	Cellulose	SC3	Shanghai
+SRR15423245	31	Inulin	SI3	Shanghai
+SRR15423251	5	Cellulose	SC2	Shanghai
+SRR15423291	0	Resistant starch	SR4	Shanghai
+SRR15423296	13	Inulin	SI5	Shanghai
+SRR15423297	13	Inulin	SI4	Shanghai
+SRR15423298	13	Inulin	SI3	Shanghai
+SRR15423299	0	Inulin	BI4	Beijing
+SRR15423300	13	Inulin	SI2	Shanghai
+SRR15423301	13	Inulin	SI1	Shanghai
+SRR15423303	0	Resistant starch	SR3	Shanghai
+SRR15423308	13	Resistant starch	SR5	Shanghai
+SRR15423309	13	Resistant starch	SR4	Shanghai
+SRR15423311	13	Resistant starch	SR3	Shanghai
+SRR15423312	13	Resistant starch	SR2	Shanghai
+SRR15423313	13	Resistant starch	SR1	Shanghai
+SRR15423327	5	Cellulose	SC1	Shanghai
+SRR15423331	31	Inulin	SI2	Shanghai
+SRR15423340	0	Inulin	SI5	Shanghai
+SRR15423350	13	Cellulose	SC5	Shanghai
+SRR15423351	0	Resistant starch	SR2	Shanghai
+SRR15423352	13	Cellulose	SC4	Shanghai
+SRR15423353	0	Inulin	BI3	Beijing
+SRR15423354	13	Cellulose	SC3	Shanghai
+SRR15423355	13	Cellulose	SC2	Shanghai
+SRR15423356	13	Cellulose	SC1	Shanghai
+SRR15423358	5	Inulin	SI5	Shanghai
+SRR15423360	5	Inulin	SI4	Shanghai
+SRR15423362	5	Inulin	SI3	Shanghai
+SRR15423365	5	Inulin	SI2	Shanghai
+SRR15423367	5	Inulin	SI1	Shanghai
+SRR15423369	0	Resistant starch	SR1	Shanghai

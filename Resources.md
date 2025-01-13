@@ -41,7 +41,7 @@ For users new to R, you'll want to install both R and R studio on your computer 
 
 1)  [Video tutorial helpful for syntax and basic R programming:](https://www.youtube.com/watch?v=FY8BISK5DpM)
 
-2) A nice (and slightly more advanced) tutorial by Laura Camelo on how to process RNA-seq data using R. Good for understanding syntax, data types, and visualization.
+2) A nice (and slightly more advanced)[tutorial](https://github.com/anshulsinha1/617_16S_Tutorial/blob/main/Resources/RNAseqWorkshop-UAEM-2020-2.pdf) by Laura Camelo on how to process RNA-seq data using R. Good for understanding syntax, data types, and visualization. Start at the "intro to R section and follow along using the [.txt](https://github.com/anshulsinha1/617_16S_Tutorial/blob/main/Resources/RawCounts_phiAb11510.txt)
 
 
 

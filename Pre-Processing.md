@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pre-Processing
-description: Description for Pre-Processing
+description: Steps for processing raw 16S rRNA gene sequencing reads in Qiime2 
 permalink: /pre-processing/
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Resources
-description: 
+description: ""
 permalink: /resources/
 ---
 
@@ -39,8 +39,6 @@ For users new to R, you'll want to install both R and R studio on your computer 
 1) Helpful for syntax and basic R programming: https://www.youtube.com/watch?v=FY8BISK5DpM&t=120s
 
 2) A nice (and slightly more advanced) tutorial by Laura Camelo on how to process RNA-seq data using R. Good for understanding syntax, data types, and visualization
-
-
 
 
 

@@ -23,7 +23,8 @@ The goal here is not to go through every step in excruciating detail but to give
 
 ## Dataset to be analyzed: 
 
-Ecological dynamics of the gut microbiome in response to dietary fiber: Liu et al., 2022 (ISME): https://www.nature.com/articles/s41396-022-01253-4#code-availability
+Ecological dynamics of the gut microbiome in response to dietary fiber: Liu et al., 2022 (ISME): [Link](https://www.nature.com/articles/s41396-022-01253-4#code-availability)
+
 
 Feel free to read the paper before the classes, but no need to. Since we are "re" analyzing the dataset, there will be spoilers if you do read it!
 

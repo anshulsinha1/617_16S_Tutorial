@@ -1,0 +1,412 @@
+---
+title: "Untitled"
+output:
+  html_document: default
+  pdf_document: default
+date: "2025-01-11"
+permalink: /walkthrough/
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Analysis Walkthrough 
+
+- The "hands-on" portion of the class will focus on trying to manipulate 16S abundance tables so that we can pull out informative data and visualizations. 
+
+
+- We won't have time to go through the entirety of the 16S analysis pipeline. I've pre-processed the raw 16S reads to do the following: 1) Trim primers and adapters, 
+
+## Importing the data 
+
+
+
+
+
+
+
+
+
+```{r}
+library(phyloseq)
+library(qiime2R)
+library(microViz)
+library(phyloseq)
+library(ggplot2)
+library(ape)
+library(microbiome)
+library(dplyr)
+```
+
+
+
+```{r}
+#read in qiime artifacts as phyloseq object 
+
+
+physeq <- qza_to_phyloseq(
+    features="/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/feature-sample-filtered-table.qza",
+    tree="/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/rooted-tree.qza",
+    taxonomy="/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/filtered-taxonomy.qza",
+    metadata = "/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/sample-metadata.txt"
+    )
+
+physeq_qza <- physeq
+
+#Reverse engineering tables so that I get data they can download without using qiime2R
+
+OTU_tab = as(otu_table(physeq), "matrix")
+tax_table = as(tax_table(physeq), "matrix")
+meta_tab = as(sample_data(physeq), "matrix")
+tree1 = phy_tree(physeq)
+
+
+write.csv(OTU_tab, "/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/OTU_table.csv" )
+write.csv(tax_table, "/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/taxonomy_table.csv" )
+write.csv(meta_tab, "/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/metadata.csv" )
+ape::write.tree(tree1, "/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/tree.tree")
+```
+
+```{r}
+
+#read in OTU table
+OTU_table <- read.csv("/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/OTU_table.csv", check.names = FALSE, row.names = 1) #define rownames as first column 
+#convert to matrix
+OTU_table <- as.matrix(OTU_table)
+
+
+
+#read in taxonomy table 
+taxonomy_table <- read.csv("/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/taxonomy_table.csv", check.names = FALSE)
+#convert to matrix 
+taxonomy_table <- as.matrix(taxonomy_table)
+
+#make the rownames of the taxonomy matrix the same as the rownames of the otu matrix 
+rownames(OTU_table) <- rownames(taxonomy_table)
+
+
+
+
+
+
+#read in metadata
+metadata <- read.csv("/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/metadata.csv", check.names = FALSE, row.names = 1)
+
+
+#read in tree 
+tree <- read_tree("/Users/anshulsinha/Desktop/microbiome_617_lectures/16S_workshop/artifacts/qza_to_phyloseq/exported_ps/tree.tree")
+
+
+
+
+
+# Now we need to tell phyloseq what they 
+
+OTU = otu_table(OTU_table, taxa_are_rows = TRUE)
+TAX = tax_table(taxonomy_table)
+META = sample_data(metadata)
+
+
+#backup if qiime2R doesnt work 
+
+ps2 <- phyloseq(OTU, TAX, META)
+
+
+
+
+```
+
+
+```{r}
+
+
+## Part 1 - Exploring the data - Metadata 
+
+#Question 1 - View the Phyloseq object - 
+# 1A) how many taxa and samples do we have in the dataset
+physeq
+
+# Try to get a better sense of the data that we're working with by exploring the metadata 
+
+# View the metadata object that we read in from the downloaded .csv
+
+# 1B) How many time points are in the experiment?
+# 1C) What are the three diet treatments?
+# 1D) Where are the mouse vendors from? 
+
+#Start to think of some microbiome based questions one could answer based on the metdata we have?
+
+unique(metadata$Day)
+unique(metadata$Group)
+unique(metadata$vendor)
+unique(metadata$mice_id)
+
+
+
+
+
+
+
+
+```
+```{r}
+#Part 2 - Exploring the composition of the microbiome using compositional bar plots
+
+
+#Make a simple bar plot using the phyloseq/Microviz plot_bar command
+#This command tells will plot - per sample - the relative abundance of bacteria at different taxonomic levels 
+#Lets first look at some high-level taxonomy. 
+
+
+#First we need to "fix" the taxa - removes possible unclassified ("NAs") from our dataset, which are incompatible with the comp_barplot function
+fixed_physeq <- tax_fix(physeq)
+fixed_physeq <- fixed_physeq %>% 
+  tax_fix(unknowns = c("uncultured"))
+
+
+
+#Now plot using the comp_barplot function - use the "fixed" phyloseq object and toggle between different taxonomic ranks using the "tax_level" flag 
+# Spend some time looking through these plots at different taxonomic levels 
+
+
+comp_barplot(fixed_physeq, tax_level = "Phylum") 
+
+
+
+# Note that by default, comp_barplot will plot the most 8 abundant taxa, you can increase this number by using the n_taxa flag - more useful for lower level ranks 
+
+comp_barplot(fixed_physeq, tax_level = "Phylum", n_taxa = 12) 
+
+
+
+
+# Does anything stand out here? 
+# 3A) Which bacterial phyla tend to be the most abundant in the dataset? 
+# 3B) What about at the family and genus levels? 
+# 3C) Try doing this at species level, anything strange to report of the species names?
+
+```
+
+
+
+
+
+
+
+```{r}
+# Part 3 - Exploring ASV trends 
+
+# We have nice broad view of  high level taxonomy in the data, but what about at finer resolution? 
+# Since we have 1,840 distinct ASVs in our dataset, it's hard to visualize the data using something like a bar plot or even a heatmap
+
+# We can try to see how prevalent each of these ASVs are across the dataset to get a sense of which ones are "important"
+
+
+# This will require a bit of data manipulation... 
+
+
+#The code  below transforms our phyloseq object to calculate for how many ASVs each sample is found 
+
+#For folks with R experience: we are applying a function that 1) accesses the OTU table from the Phyloseq, 2) MARGIN =1 defines that our taxa are in the rows, 3) FUN: for each row (ASV) it counts the number of non-zero entries 
+
+
+prevalence = apply(X = otu_table(physeq),MARGIN = 1, FUN = function(x){sum(x > 0)})
+
+
+#convert to a df
+prevalence.df <- as.data.frame(prevalence)
+
+# Our ASVs (rows) have indecipherable codes (used by the Silva database)!
+# Lets use our taxonomy table to help us find out the ID of these 
+
+# 1) Get the taxonomy table from the TAX 
+tax_df <- as.data.frame(TAX)
+rownames(tax_df) <- tax_df[[1]]  # Set the first column as row names
+
+
+#2) now merge the taxonomy dataframe and the prevalence dataframe 
+merged_df_prevalence <- merge(prevalence.df, tax_df, by = "row.names", all = TRUE)
+
+# Now we have a dataframe that has each unique ASV as a row name, taxonomy labels, and how many samples each ASV is found in.
+
+# Before we think about ASV prevalence, take a look at the dataframe and look at the taxonomy annotations. Notice that we have NO species-level assignments. This is not a mistake. In general, V3-V4 primers don't give great species resolution. The Silva database also doesn't curate species names in their database, so for accuracy sake we wont consider these. 
+
+
+
+#Question 3A) Out of the 1,840 ASVs, how many have genera and family-level designations?
+
+
+# You can use  sum(!is.na(df$your_column)) to count the number of rows that are NOT NA (ie- have a taxonomy assignment)
+#Ie - 0 for species 
+
+sum(!is.na(merged_df_prevalence$Species))
+sum(!is.na(merged_df_prevalence$Genus)) #1540
+sum(!is.na(merged_df_prevalence$Family)) #1824
+
+
+#Now we can dive into some of the prevalence data 
+# Order the order the dataframe in descending order to get 
+
+# Arrange in descending order
+df_prevalence_ordered <- merged_df_prevalence[order(-merged_df_prevalence$prevalence), ]
+
+#Question 3B) How many ASVs are found in ALL 152 samples and what genera do they belong to? 
+#Answer: Faecalibacterium, Tuzzerella, Tannerellaceae, Anaerotruncus
+
+
+
+##Let's do something similar but with abundance instead of prevalence!
+
+
+# Step 1: Transform  the phyloseq to get relative abundance info for each ASV
+physeq_rel <- transform_sample_counts(physeq, function(x) x / sum(x))
+
+
+
+# Step 2: Extract abundance data for our phyloseq object 
+
+taxa_abundance <- taxa_sums(physeq_rel)  # Sum the relative abundance for each ASV
+abundance_df <- data.frame(
+  ASV = names(taxa_abundance),
+  Abundance = taxa_abundance
+)
+
+
+
+
+# Step 3: Merge with our taxonomy dataframe
+merged_df_abundance <- merge(abundance_df, tax_df, by = "row.names", all = TRUE)
+
+
+
+
+# Step 4: Rank taxa by abundance
+#ordering the dataframe by abundance 
+merged_df_abundance <- merged_df_abundance[order(-merged_df_abundance$Abundance), ]
+#creating a rank using seq_len, which gives a integer in order to the ordered row names
+merged_df_abundance$Rank <- seq_len(nrow(merged_df_abundance))  
+
+
+
+# Now we can view our abundance dataframe, which ranks each ASV by its abundance
+
+# Question 3C) What are the 5 most abundant ASVs in the dataset?
+
+# Question 3D) Are these also the most prevalent ones? (Compare your abundance dataframe with your abundance dataframe)
+merged_df_abundance
+
+
+
+
+
+
+# Step 5: Plot the rank-abundance curve using ggplot 
+# This rank-abundance curve is called a Whittaker plot 
+# Note the long tail, which indicates that there are a small number of highly abundant ASVs and a long-tail of low-abundant "rare" ASVs
+# A common feature of gut microbiomes!
+ggplot(merged_df_abundance, aes(x = Rank, y = Abundance)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Rank-Abundance Curve",
+    x = "Rank",
+    y = "Relative Abundance"
+  ) +
+  theme_minimal()
+
+
+
+
+```
+
+
+
+
+
+```{r}
+### Part 4 - Explore dataset-specific trends using bar plots
+## So far we've explored the metadata and now have a general overview of what taxa are present in the dataset
+## Now we can try to look for trends to gain some insight into the study
+
+META
+#Reminder this study deals looks at the effect of diet intervention in mice orginating from different vendors
+
+#Lets see if the vendor the mice come from has any effect on composition using the comp_barplot function - we can add the group_by flag to group our plots by a metadata column!
+
+comp_barplot(fixed_physeq, tax_level = "Family", group_by = "vendor", n_taxa = 12) 
+
+
+# Question 4A) Look through different taxonomic levels - What differences in the relative abundance do you observe based on mouse vendor? 
+# Answer = Bacteroidaceae and Tann high, Sutterlaceae in Shanghai (less Muribaculaceae), In Guangdong more Desulf, Prevotellaceae, Helicobacteriaceae, In Beijing more Erysi/Rikenellaceae
+
+
+
+# Question 4B) In the published paper they describe differences specifically in Muribaculaceae (polysaccharide-degrading). Describe the differences in this family between vendors 
+# Answer = generally less in Shanghai 
+
+
+# It does look like the vendor influences microbiome composition! To determine the effect of diet on these mice we may have to account for this 
+# One strategy is to analyze the effects of diet separately for each vendor. To do this we'll "filter" our phyloseq object for each vendor 
+# We can use the subset_samples command 
+# To make our life easier subset from the "fixed" ps object 
+
+
+bejing_physeq <- subset_samples(fixed_physeq, vendor == "Beijing")
+# view the physeq object to confirm that we've lost samples as expected!
+
+
+# Do this for each vendor 
+shanghai_physeq <- subset_samples(fixed_physeq, vendor == "Shanghai")
+
+guangdong_physeq <- subset_samples(fixed_physeq, vendor == "Guangdong")
+
+
+# Now we can start to look at the effect of diet on the microbiomes of these mice...
+# But first there is one more consideration. Time point! 
+# 0 = baseline (before diet intervention), and 5, 13, 31 says post intervention (Note that time points vary between vendor study)
+# For each vendor, we can investigate the effect of diet at different time points by faceting our plot!
+
+
+#For simplicity sake, let's just focus on Guangdong and Shanghai at the Family level
+
+
+
+comp_barplot(shanghai_physeq, tax_level = "Family", group_by = "Group", facet_by = "Day", n_taxa = 12)
+comp_barplot(guangdong_physeq, tax_level = "Family", group_by = "Group", facet_by = "Day", n_taxa = 12)
+
+
+
+# Question 4C) In these studies cellulose is the control diet (all mice are kept on cellulose before day 0, and then either switch to inulin, resistant starch or are kept on cellulose). Is microbiome composition stable over time in this control? 
+
+# Question 4D) What effects do inulin and resistant starch have on the microbiome? Are these constant over time?  do they differ based on mouse vendor?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+```{r}
+#Part 5 - Prepping diversity analyses 
+# While our bar plots have given us some nice qualitative measures of the community composition, can we assess changes in a more quantitative way? 
+# We can calculate changes in microbial diversity (the number of taxa present and how they are distributed)
+
+# 
+
+
+```
+
+

@@ -14,6 +14,11 @@ Bioinformatics techniques are ever-evolving, so this is just a drop in the bucke
 
 
 
+# Statistical inference class: Emmanuel Gonzales 
+
+- Prep by reading [this paper!](https://link.springer.com/article/10.1186/s40168-017-0256-8)
+
+
 # Using and installing R
 By Laura Camelo, McGill University
 
